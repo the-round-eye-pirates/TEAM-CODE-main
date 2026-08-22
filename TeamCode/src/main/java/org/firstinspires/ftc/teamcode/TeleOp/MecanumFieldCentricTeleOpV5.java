@@ -131,9 +131,12 @@ public class MecanumFieldCentricTeleOpV5 extends LinearOpMode {
         ));
 
         panelsTelemetry = PanelsTelemetry.INSTANCE.getTelemetry();
-        panelsTelemetry.debug("Status", "Initialized. Waiting for start.");
-        panelsTelemetry.debug("Auto-Start Enabled", Tuning.AUTO_START_ENABLED);
-        panelsTelemetry.debug("Push Correction Enabled", Tuning.PUSH_CORRECTION_ENABLED);
+        panelsTelemetry.debug
+                ("Status", "Initialized. Waiting for start.");
+        panelsTelemetry.debug
+                ("Auto-Start Enabled", Tuning.AUTO_START_ENABLED);
+        panelsTelemetry.debug
+                ("Push Correction Enabled", Tuning.PUSH_CORRECTION_ENABLED);
         panelsTelemetry.update(telemetry);
 
         waitForStart();
@@ -201,12 +204,18 @@ public class MecanumFieldCentricTeleOpV5 extends LinearOpMode {
                     }
                 }
 
-                panelsTelemetry.debug("Mode", "AUTO START");
-                panelsTelemetry.debug("Auto-Start Arrived", autoStartArrived);
-                panelsTelemetry.debug("Auto-Start Timed Out", timedOut);
-                panelsTelemetry.debug("Heading (deg)", curHeadingDeg);
-                panelsTelemetry.debug("Est Pos X (mm)", posX_mm);
-                panelsTelemetry.debug("Est Pos Y (mm)", posY_mm);
+                panelsTelemetry.debug
+                        ("Mode", "AUTO START");
+                panelsTelemetry.debug
+                        ("Auto-Start Arrived", autoStartArrived);
+                panelsTelemetry.debug
+                        ("Auto-Start Timed Out", timedOut);
+                panelsTelemetry.debug
+                        ("Heading (deg)", curHeadingDeg);
+                panelsTelemetry.debug
+                        ("Est Pos X (mm)", posX_mm);
+                panelsTelemetry.debug
+                        ("Est Pos Y (mm)", posY_mm);
                 panelsTelemetry.update(telemetry);
                 continue;
             }
@@ -266,7 +275,8 @@ public class MecanumFieldCentricTeleOpV5 extends LinearOpMode {
                 holdAnchorValid = true;
                 holdArrived = true;
                 headingLockValid = false;
-                applyDrivePowers(0, 0, 0, 1.0);
+                applyDrivePowers
+                        (0, 0, 0, 1.0);
                 mode = "IDLE (anchored)";
             } else {
                 headingLockValid = false;
@@ -284,16 +294,26 @@ public class MecanumFieldCentricTeleOpV5 extends LinearOpMode {
                 );
             }
 
-            panelsTelemetry.debug("Slow Mode", slowMode);
-            panelsTelemetry.debug("Field Centric", Tuning.FIELD_CENTRIC);
-            panelsTelemetry.debug("Return Enabled", Tuning.RETURN_TO_SAVE_ENABLED);
-            panelsTelemetry.debug("Push Correction Enabled", Tuning.PUSH_CORRECTION_ENABLED);
-            panelsTelemetry.debug("Heading Hold Enabled", Tuning.HEADING_HOLD_ENABLED);
-            panelsTelemetry.debug("Heading Lock Target (deg)", headingLockTargetDeg);
-            panelsTelemetry.debug("Heading (deg)", curHeadingDeg);
-            panelsTelemetry.debug("Est Pos X (mm)", posX_mm);
-            panelsTelemetry.debug("Est Pos Y (mm)", posY_mm);
-            panelsTelemetry.debug("Saved Valid", savedPositionValid);
+            panelsTelemetry.debug
+                    ("Slow Mode", slowMode);
+            panelsTelemetry.debug
+                    ("Field Centric", Tuning.FIELD_CENTRIC);
+            panelsTelemetry.debug
+                    ("Return Enabled", Tuning.RETURN_TO_SAVE_ENABLED);
+            panelsTelemetry.debug
+                    ("Push Correction Enabled", Tuning.PUSH_CORRECTION_ENABLED);
+            panelsTelemetry.debug
+                    ("Heading Hold Enabled", Tuning.HEADING_HOLD_ENABLED);
+            panelsTelemetry.debug
+                    ("Heading Lock Target (deg)", headingLockTargetDeg);
+            panelsTelemetry.debug
+                    ("Heading (deg)", curHeadingDeg);
+            panelsTelemetry.debug
+                    ("Est Pos X (mm)", posX_mm);
+            panelsTelemetry.debug
+                    ("Est Pos Y (mm)", posY_mm);
+            panelsTelemetry.debug
+                    ("Saved Valid", savedPositionValid);
 
             if (savedPositionValid) {
                 panelsTelemetry.debug("Saved X (mm)", savedX_mm);
